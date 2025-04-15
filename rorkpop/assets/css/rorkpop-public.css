@@ -1,0 +1,200 @@
+/**
+ * Public styles for RORK POP
+ */
+
+/* Overlay */
+.rorkpop-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.rorkpop-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Popup Container */
+.rorkpop-container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.rorkpop-overlay.show .rorkpop-container {
+    transform: scale(1);
+}
+
+/* Close Button */
+.rorkpop-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.rorkpop-close:hover {
+    color: #333;
+}
+
+/* Content */
+.rorkpop-content {
+    padding: 25px;
+}
+
+/* Header */
+.rorkpop-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rorkpop-logo {
+    max-width: 180px;
+    margin-bottom: 15px;
+}
+
+.rorkpop-header h2 {
+    font-size: 32px;
+    margin: 10px 0 5px;
+    color: #333;
+    font-weight: 700;
+}
+
+.rorkpop-header h3 {
+    font-size: 24px;
+    margin: 0 0 15px;
+    color: #555;
+    font-weight: 600;
+}
+
+/* Message */
+.rorkpop-message {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.rorkpop-message p {
+    line-height: 1.6;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Form */
+.rorkpop-form-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.rorkpop-form-container h4 {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 0 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.rorkpop-form-field {
+    margin-bottom: 15px;
+}
+
+.rorkpop-form-field input,
+.rorkpop-form-field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.rorkpop-form-field input:focus,
+.rorkpop-form-field select:focus {
+    border-color: #0073aa;
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 115, 170, 0.3);
+}
+
+.rorkpop-form-submit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.rorkpop-form-submit button {
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.rorkpop-form-submit button:hover {
+    background-color: #005f8b;
+}
+
+/* Response Message */
+.rorkpop-response-message {
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    display: none;
+}
+
+.rorkpop-response-message.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+    display: block;
+}
+
+.rorkpop-response-message.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+    display: block;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+    .rorkpop-header h2 {
+        font-size: 28px;
+    }
+    
+    .rorkpop-header h3 {
+        font-size: 20px;
+    }
+    
+    .rorkpop-content {
+        padding: 15px;
+    }
+    
+    .rorkpop-form-container {
+        padding: 15px;
+    }
+} 

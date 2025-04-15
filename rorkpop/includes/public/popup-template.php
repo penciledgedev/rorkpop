@@ -1,0 +1,77 @@
+<div id="rorkpop-overlay" class="rorkpop-overlay">
+    <div class="rorkpop-container">
+        <div class="rorkpop-close">&times;</div>
+        <div class="rorkpop-content">
+            <div class="rorkpop-header">
+                <?php if (!empty($logo_url)) : ?>
+                    <img src="<?php echo esc_url($logo_url); ?>" alt="RORK TV Logo" class="rorkpop-logo">
+                <?php endif; ?>
+                <h2>Hello!</h2>
+                <h3>Welcome to RORK TV!</h3>
+            </div>
+            
+            <div class="rorkpop-message">
+                <p>
+                    It's all about empowering kids to grow in the faith and unlock their God-given potentials. 
+                    Enjoy over 1,000 episodes of Spirit-inspired programmes and 24/7 wholesome content, featuring 
+                    Rhapsody of Realities, inspiring stories, fun activities, Bible-based teachings, songs, 
+                    testimonies and engaging adventures to help them live the victorious life in Christ, and impact 
+                    their world positively with the Gospel.
+                </p>
+            </div>
+            
+            <div class="rorkpop-form-container">
+                <h4>Let's know you better</h4>
+                <form id="rorkpop-form" class="rorkpop-form">
+                    <div class="rorkpop-form-field">
+                        <input type="text" id="rorkpop-name" name="name" placeholder="Name" required>
+                    </div>
+                    
+                    <div class="rorkpop-form-field">
+                        <input type="email" id="rorkpop-email" name="email" placeholder="Email" required>
+                    </div>
+                    
+                    <div class="rorkpop-form-field">
+                        <select id="rorkpop-country" name="country" required>
+                            <option value="">Select Country</option>
+                            <?php
+                            $countries = array(
+                                'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria',
+                                'Azerbaijan', 'Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan',
+                                'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cabo Verde', 'Cambodia',
+                                'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica',
+                                'Croatia', 'Cuba', 'Cyprus', 'Czech Republic', 'Denmark', 'Djibouti', 'Dominica', 'Dominican Republic', 'Ecuador', 'Egypt',
+                                'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia', 'Fiji', 'Finland', 'France', 'Gabon',
+                                'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana',
+                                'Haiti', 'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel',
+                                'Italy', 'Jamaica', 'Japan', 'Jordan', 'Kazakhstan', 'Kenya', 'Kiribati', 'Korea, North', 'Korea, South', 'Kosovo',
+                                'Kuwait', 'Kyrgyzstan', 'Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania',
+                                'Luxembourg', 'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius',
+                                'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar', 'Namibia',
+                                'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Macedonia', 'Norway', 'Oman',
+                                'Pakistan', 'Palau', 'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal',
+                                'Qatar', 'Romania', 'Russia', 'Rwanda', 'Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe',
+                                'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia',
+                                'South Africa', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria', 'Taiwan',
+                                'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan',
+                                'Tuvalu', 'Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Vatican City',
+                                'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'
+                            );
+                            
+                            foreach ($countries as $country) {
+                                echo '<option value="' . esc_attr($country) . '">' . esc_html($country) . '</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                    
+                    <div class="rorkpop-form-submit">
+                        <button type="submit" id="rorkpop-submit">Submit</button>
+                    </div>
+                    
+                    <div id="rorkpop-message" class="rorkpop-response-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 

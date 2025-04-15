@@ -1,0 +1,55 @@
+/**
+ * Admin styles for RORK POP
+ */
+
+.wrap h1 {
+    margin-bottom: 20px;
+}
+
+.form-table th {
+    width: 200px;
+}
+
+.notice {
+    margin-top: 15px;
+}
+
+/* Submissions table styling */
+.wp-list-table {
+    margin-top: 15px;
+}
+
+.tablenav {
+    margin: 15px 0;
+}
+
+.tablenav .button {
+    margin-right: 5px;
+}
+
+.pagination-links .page-numbers {
+    display: inline-block;
+    min-width: 28px;
+    text-align: center;
+    padding: 3px 5px;
+    margin: 0 2px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    text-decoration: none;
+}
+
+.pagination-links .page-numbers.current {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+.delete {
+    color: #a00;
+    text-decoration: none;
+}
+
+.delete:hover {
+    color: #dc3232;
+    text-decoration: underline;
+} 
