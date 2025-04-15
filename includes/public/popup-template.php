@@ -12,11 +12,9 @@
             
             <div class="rorkpop-message">
                 <p>
-                    It's all about empowering kids to grow in the faith and unlock their God-given potentials. 
-                    Enjoy over 1,000 episodes of Spirit-inspired programmes and 24/7 wholesome content, featuring 
-                    Rhapsody of Realities, inspiring stories, fun activities, Bible-based teachings, songs, 
-                    testimonies and engaging adventures to help them live the victorious life in Christ, and impact 
-                    their world positively with the Gospel.
+                Inspiring You to Love Jesus, Equipping You to Win Others
+Join our faith-filled community and enjoy inspiring content, fun activities, and Bible-based teachings.
+
                 </p>
             </div>
             
