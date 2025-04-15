@@ -24,14 +24,17 @@
                 <h4>Let's know you better</h4>
                 <form id="rorkpop-form" class="rorkpop-form">
                     <div class="rorkpop-form-field">
-                        <input type="text" id="rorkpop-name" name="name" placeholder="Name" required>
+                        <label for="rorkpop-name">Name</label>
+                        <input type="text" id="rorkpop-name" name="name" required>
                     </div>
                     
                     <div class="rorkpop-form-field">
-                        <input type="email" id="rorkpop-email" name="email" placeholder="Email" required>
+                        <label for="rorkpop-email">Email</label>
+                        <input type="email" id="rorkpop-email" name="email" required>
                     </div>
                     
                     <div class="rorkpop-form-field">
+                        <label for="rorkpop-country">Country</label>
                         <select id="rorkpop-country" name="country" required>
                             <option value="">Select Country</option>
                             <?php

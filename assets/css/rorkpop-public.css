@@ -119,6 +119,14 @@
     margin-bottom: 15px;
 }
 
+.rorkpop-form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+}
+
 .rorkpop-form-field input,
 .rorkpop-form-field select {
     width: 100%;
@@ -196,5 +204,9 @@
     
     .rorkpop-form-container {
         padding: 15px;
+    }
+    
+    .rorkpop-form-field label {
+        font-size: 14px;
     }
 } 
