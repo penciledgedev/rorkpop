@@ -51,8 +51,16 @@ class RorkPop {
         add_action('wp_enqueue_scripts', array($this->public, 'enqueue_styles'));
         add_action('wp_enqueue_scripts', array($this->public, 'enqueue_scripts'));
         add_action('wp_footer', array($this->public, 'display_popup'));
-        add_action('wp_ajax_rorkpop_submit_form', array($this->public, 'process_form_submission'));
-        add_action('wp_ajax_nopriv_rorkpop_submit_form', array($this->public, 'process_form_submission'));
+        
+        // Register AJAX handlers for the registration system
+        add_action('wp_ajax_rorkpop_register_user', array($this->public, 'register_user'));
+        add_action('wp_ajax_nopriv_rorkpop_register_user', array($this->public, 'register_user'));
+        
+        // Register AJAX handlers for login system
+        add_action('wp_ajax_nopriv_rorkpop_login_user', array($this->public, 'login_user'));
+        
+        // Email verification
+        add_action('init', array($this->public, 'verify_email'));
     }
     
     /**

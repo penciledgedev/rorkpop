@@ -2,7 +2,7 @@
 /**
  * Plugin Name: RORK POP
  * Plugin URI: https://penciledge.com
- * Description: A popup plugin for email and data capture, especially on video category pages.
+ * Description: A popup plugin for user registration and authentication with social login capabilities.
  * Version: 1.0.0
  * Author: Uyi Moses
  * Author URI: https://penciledge.net
@@ -52,6 +52,15 @@ function rorkpop_activate() {
     
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta($sql);
+    
+    // Add default plugin options
+    $default_settings = array(
+        'enable_globally' => true,
+        'video_category_only' => false,
+        'logo_url' => RORKPOP_PLUGIN_URL . 'assets/images/default-logo.png',
+    );
+    
+    add_option('rorkpop_settings', $default_settings);
 }
 
 // Register deactivation hook

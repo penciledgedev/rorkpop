@@ -2,6 +2,7 @@
  * Public styles for RORK POP
  */
 
+/* Remove global font - use website default fonts instead */
 /* Overlay */
 .rorkpop-overlay {
     position: fixed;
@@ -71,21 +72,25 @@
 
 .rorkpop-logo {
     max-width: 180px;
+    margin-top: 15px;
     margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .rorkpop-header h2 {
     font-size: 32px;
     margin: 10px 0 5px;
     color: #333;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .rorkpop-header h3 {
     font-size: 24px;
     margin: 0 0 15px;
     color: #555;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 /* Message */
@@ -100,6 +105,14 @@
     font-size: 16px;
 }
 
+/* Bold message specifically for the main slogan */
+.bold-message {
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: #333;
+}
+
 /* Form */
 .rorkpop-form-container {
     background-color: #f8f8f8;
@@ -112,7 +125,79 @@
     font-size: 18px;
     margin: 0 0 20px;
     color: #333;
-    font-weight: 600;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Social Login */
+.rorkpop-social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.rorkpop-social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff !important;
+    transition: opacity 0.2s ease;
+}
+
+.rorkpop-social-button:hover {
+    opacity: 0.9;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.rorkpop-social-button.facebook {
+    background-color: #1877F2;
+}
+
+.rorkpop-social-button.google {
+    background-color: #DB4437;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.social-icon i {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Divider */
+.rorkpop-divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #666;
+}
+
+.rorkpop-divider:before,
+.rorkpop-divider:after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.rorkpop-divider span {
+    padding: 0 10px;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 .rorkpop-form-field {
@@ -122,9 +207,36 @@
 .rorkpop-form-field label {
     display: block;
     margin-bottom: 5px;
-    font-weight: 600;
+    font-weight: bold;
     color: #333;
     font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* Checkbox style */
+.rorkpop-form-field.checkbox {
+    display: flex;
+    align-items: flex-start;
+}
+
+.rorkpop-form-field.checkbox input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.rorkpop-form-field.checkbox label {
+    display: inline;
+    font-weight: normal;
+}
+
+.rorkpop-form-field.checkbox label a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.rorkpop-form-field.checkbox label a:hover {
+    text-decoration: underline;
 }
 
 .rorkpop-form-field input,
@@ -157,12 +269,38 @@
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: bold;
     transition: background-color 0.2s ease;
+    letter-spacing: 0.5px;
 }
 
 .rorkpop-form-submit button:hover {
     background-color: #005f8b;
+}
+
+/* Login Link */
+.rorkpop-login-link {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.rorkpop-login-link p {
+    color: #333 !important;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.rorkpop-login-link a {
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rorkpop-login-link a:hover {
+    text-decoration: underline;
 }
 
 /* Response Message */
@@ -181,11 +319,74 @@
     display: block;
 }
 
+.rorkpop-response-message.success h4 {
+    color: #3c763d;
+    font-size: 18px;
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.rorkpop-response-message.success strong {
+    font-weight: bold;
+}
+
 .rorkpop-response-message.error {
     background-color: #f2dede;
     color: #a94442;
     border: 1px solid #ebccd1;
     display: block;
+}
+
+/* Verification Success Message */
+.rorkpop-verification-success {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rorkpop-verification-content {
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    text-align: center;
+}
+
+.rorkpop-verification-content h3 {
+    font-size: 24px;
+    margin: 0 0 15px;
+    color: #3c763d;
+}
+
+.rorkpop-verification-content p {
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+#rorkpop-verification-close {
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+#rorkpop-verification-close:hover {
+    background-color: #005f8b;
 }
 
 /* Responsive Adjustments */
@@ -208,5 +409,9 @@
     
     .rorkpop-form-field label {
         font-size: 14px;
+    }
+    
+    .bold-message {
+        font-size: 16px;
     }
 } 
